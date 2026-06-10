@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String?
+  passwordHash String
+  createdAt    DateTime @default(now())
+
+  // Preferences stored as JSON strings (SQLite has no array type)
+  dietaryRestrictions String @default("[]")
+  foodPreferences     String @default("{}")
+  groceryStore        String @default("king-soopers")
+  weeklyBudget        Float?
+  servingsPerMeal     Int    @default(4)
+
+  // Bumped whenever preferences change, so the planner / grocery list can detect
+  // that a saved plan or list was generated against now-stale preferences.
+  prefsUpdatedAt DateTime @default(now())
+
+  recipes   Recipe[]
+  weekPlans WeekPlan[]
+}
+
+model Recipe {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name         String
+  description  String?
+  servings     Int      @default(4)
+  mealType     String   @default("dinner")
+  ingredients  String   @default("[]")
+  instructions String?
+  tags         String   @default("[]")
+  isAiGenerated Boolean @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model WeekPlan {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  weekStart String
+  meals     String   @default("{}")
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  groceryList GroceryList?
+
+  @@unique([userId, weekStart])
+}
+
+model GroceryList {
+  id         String   @id @default(cuid())
+  weekPlanId String   @unique
+  weekPlan   WeekPlan @relation(fields: [weekPlanId], references: [id], onDelete: Cascade)
+  items      String   @default("[]")
+  totalCost  Float    @default(0)
+  // Grocery store this list was generated against — compared to the user's current
+  // profile store to prompt "you changed your store, update?" (null = legacy row).
+  store      String?
+  notes      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}

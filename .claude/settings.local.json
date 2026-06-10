@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npx prisma generate)",
+      "PowerShell(git *)",
+      "PowerShell($paths = @\\(\"$env:ProgramFiles\\\\Git\\\\cmd\\\\git.exe\", \"${env:ProgramFiles\\(x86\\)}\\\\Git\\\\cmd\\\\git.exe\", \"$env:LOCALAPPDATA\\\\Programs\\\\Git\\\\cmd\\\\git.exe\"\\); $found = $paths | Where-Object { Test-Path $_ }; if \\($found\\) { Write-Output \"FOUND: $found\"; & $found[0] --version } else { Write-Output \"NOT INSTALLED\"; winget --version })",
+      "PowerShell(winget install *)"
+    ]
+  }
+}
