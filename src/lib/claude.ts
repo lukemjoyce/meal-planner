@@ -190,12 +190,18 @@ ${savedRecipesSummary}`
 
   const message = await client.messages.create({
     model: RUNTIME_MODEL,
-    max_tokens: 4096,
+    // Invented recipes carry full ingredient lists + instructions, so a full week can
+    // be sizeable. Keep headroom to avoid a truncated (silently partial) tool call.
+    max_tokens: 8192,
     system: systemBlocks,
     tools: [MEAL_PLAN_TOOL],
     tool_choice: { type: 'tool', name: MEAL_PLAN_TOOL.name },
     messages: [{ role: 'user', content: userPrompt }],
   })
+
+  if (message.stop_reason === 'max_tokens') {
+    throw new Error('Meal plan generation was truncated (hit max_tokens). Try a shorter week or raise max_tokens.')
+  }
 
   const block = message.content.find((b) => b.type === 'tool_use')
   if (!block || block.type !== 'tool_use') {
@@ -317,12 +323,21 @@ ${budget ? `BUDGET: $${budget}` : ''}`
 
   const message = await client.messages.create({
     model: RUNTIME_MODEL,
-    max_tokens: 6000,
+    // A full week of meals can produce 40+ line items; the tool-call JSON for that
+    // runs ~7k output tokens. Keep generous headroom so the forced tool call is never
+    // truncated — a truncated tool call yields an empty `input` and a silent $0.00 list.
+    max_tokens: 16000,
     system: systemBlocks,
     tools: [GROCERY_LIST_TOOL],
     tool_choice: { type: 'tool', name: GROCERY_LIST_TOOL.name },
     messages: [{ role: 'user', content: userPrompt }],
   })
+
+  // If we hit the token cap mid-tool-call, `input` is incomplete/empty. Fail loudly
+  // instead of returning an empty list that looks like a successful $0.00 result.
+  if (message.stop_reason === 'max_tokens') {
+    throw new Error('Grocery list generation was truncated (hit max_tokens). Try fewer meals or raise max_tokens.')
+  }
 
   const block = message.content.find((b) => b.type === 'tool_use')
   if (!block || block.type !== 'tool_use') {

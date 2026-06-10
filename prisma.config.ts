@@ -9,6 +9,10 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: process.env["DATABASE_URL"],
+    // Migrations/introspection run DDL, which is unreliable through a pooled
+    // (PgBouncer) connection. Prefer a direct connection via DIRECT_URL, falling
+    // back to DATABASE_URL for local dev. The runtime client (src/lib/db.ts) still
+    // uses the pooled DATABASE_URL.
+    url: process.env["DIRECT_URL"] ?? process.env["DATABASE_URL"],
   },
 });
