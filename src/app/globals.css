@@ -163,3 +163,21 @@
 @utility bg-gradient-brand {
   background-image: linear-gradient(135deg, var(--primary), var(--brand));
 }
+
+/* Landing-page photo marquee. Each row's track holds the tiles twice, so a
+   translate of -50% lands on an identical frame → seamless infinite loop.
+   Alternate rows run in reverse (set via animation-direction) for the
+   opposing-direction brick effect. */
+@keyframes hearth-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.hearth-track {
+  animation: hearth-marquee linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hearth-track { animation: none; }
+}
