@@ -14,7 +14,7 @@ const jakarta = Plus_Jakarta_Sans({
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-mono', display: 'swap' })
 
 export const metadata: Metadata = {
-  title: 'Meal Planner — Smart Grocery Lists',
+  title: 'Hearth AI — Smart Grocery Lists',
   description: 'Plan your week, minimize waste, stay on budget.',
 }
 

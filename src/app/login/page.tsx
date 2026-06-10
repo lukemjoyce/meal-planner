@@ -17,7 +17,7 @@ export default function LoginPage() {
         <CardHeader>
           <div className="mb-2 text-center text-4xl">🛒</div>
           <CardTitle className="text-center text-2xl">Welcome back</CardTitle>
-          <CardDescription className="text-center">Sign in to your meal planner</CardDescription>
+          <CardDescription className="text-center">Sign in to Hearth AI</CardDescription>
         </CardHeader>
         <form action={action}>
           <CardContent className="space-y-4">

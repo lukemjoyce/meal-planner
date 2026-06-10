@@ -25,7 +25,7 @@ export function Nav({ userName }: { userName: string | null }) {
             <span className="bg-gradient-brand grid size-8 place-content-center rounded-xl text-base shadow-sm shadow-primary/20">
               🛒
             </span>
-            <span className="hidden sm:inline">Kartel</span>
+            <span className="hidden sm:inline">Hearth AI</span>
           </Link>
           <nav className="hidden gap-1 sm:flex">
             {NAV_LINKS.map((link) => (
