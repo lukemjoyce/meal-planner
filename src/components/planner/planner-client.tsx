@@ -42,7 +42,6 @@ export function PlannerClient({ initialPlan, recipes, profile, storeChange }: Pr
       ? [...new Set(Object.values(initialPlan.weekMeals).flatMap((d) => Object.keys(d ?? {})))]
       : ['dinner']
   )
-  const [daysOff, setDaysOff] = useState<DayOfWeek[]>([])
   const [explanation, setExplanation] = useState('')
   const [error, setError] = useState('')
   const [mode, setMode] = useState<'view' | 'configure'>(!initialPlan ? 'configure' : 'view')
@@ -56,8 +55,6 @@ export function PlannerClient({ initialPlan, recipes, profile, storeChange }: Pr
     dislikes: profile.foodPreferences?.dislikes ?? [],
   }
 
-  const activeDays = selectedDays.filter((d) => !daysOff.includes(d))
-
   function toggleDay(day: DayOfWeek) {
     setSelectedDays((prev) =>
       prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day]
@@ -67,12 +64,6 @@ export function PlannerClient({ initialPlan, recipes, profile, storeChange }: Pr
   function toggleMeal(meal: string) {
     setSelectedMeals((prev) =>
       prev.includes(meal) ? prev.filter((m) => m !== meal) : [...prev, meal]
-    )
-  }
-
-  function toggleDayOff(day: DayOfWeek) {
-    setDaysOff((prev) =>
-      prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day]
     )
   }
 
@@ -90,9 +81,9 @@ export function PlannerClient({ initialPlan, recipes, profile, storeChange }: Pr
           })
         }
         const result = await generateAIMealPlan({
-          days: activeDays,
+          days: selectedDays,
           meals: selectedMeals,
-          daysOff,
+          daysOff: [],
           preferences: prefs,
         })
         setWeekMeals(result.weekMeals)
@@ -204,27 +195,10 @@ export function PlannerClient({ initialPlan, recipes, profile, storeChange }: Pr
                   </div>
                 </div>
 
-                {selectedDays.length > 0 && (
-                  <div>
-                    <Label className="mb-2 block text-sm font-medium">Days off / eating out?</Label>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedDays.map((day) => (
-                        <label key={day} className="flex cursor-pointer items-center gap-1.5">
-                          <Checkbox
-                            checked={daysOff.includes(day)}
-                            onCheckedChange={() => toggleDayOff(day)}
-                          />
-                          <span className="text-sm capitalize">{day.slice(0, 3)}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
                 <div className="flex gap-2">
                   <Button
                     onClick={() => setConfigStep('questions')}
-                    disabled={activeDays.length === 0 || selectedMeals.length === 0}
+                    disabled={selectedDays.length === 0 || selectedMeals.length === 0}
                   >
                     Continue
                   </Button>
