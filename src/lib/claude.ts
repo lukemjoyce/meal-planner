@@ -205,7 +205,7 @@ ${savedRecipesSummary}`
 
   const block = message.content.find((b) => b.type === 'tool_use')
   if (!block || block.type !== 'tool_use') {
-    throw new Error('Claude did not return a meal plan')
+    throw new Error('Failed to generate a meal plan')
   }
   const parsed = block.input as Partial<GeneratedMealPlan>
 
@@ -341,7 +341,7 @@ ${budget ? `BUDGET: $${budget}` : ''}`
 
   const block = message.content.find((b) => b.type === 'tool_use')
   if (!block || block.type !== 'tool_use') {
-    throw new Error('Claude did not return a grocery list')
+    throw new Error('Failed to generate a grocery list')
   }
   const parsed = block.input as { items?: GroceryListItem[] }
   return parsed.items ?? []

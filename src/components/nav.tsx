@@ -22,7 +22,7 @@ export function Nav({ userName }: { userName: string | null }) {
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
         <div className="flex items-center gap-6">
           <Link href="/planner" className="flex items-center gap-2 font-heading text-base font-bold text-foreground">
-            <span className="bg-gradient-brand grid size-8 place-content-center rounded-xl text-base shadow-sm shadow-primary/20">
+            <span className="bg-primary grid size-8 place-content-center rounded-xl text-base shadow-sm shadow-primary/20">
               🛒
             </span>
             <span className="hidden sm:inline">Hearth AI</span>

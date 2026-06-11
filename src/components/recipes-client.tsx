@@ -31,7 +31,6 @@ function RecipeCard({ recipe, onDelete }: { recipe: RecipeData; onDelete: (id: s
         <div className="flex items-start justify-between gap-2">
           <CardTitle className="text-base leading-tight">{recipe.name}</CardTitle>
           <div className="flex shrink-0 items-center gap-1">
-            {recipe.isAiGenerated && <Badge variant="secondary" className="text-xs">AI</Badge>}
             <Badge variant="outline" className="text-xs capitalize">{recipe.mealType}</Badge>
           </div>
         </div>
@@ -261,7 +260,7 @@ export function RecipesClient({ recipes: initialRecipes }: Props) {
         <div>
           <h1 className="text-2xl font-bold text-stone-900">My Recipes</h1>
           <p className="text-sm text-stone-500">
-            {recipes.length} recipe{recipes.length !== 1 ? 's' : ''} · Claude uses these when generating your meal plan
+            {recipes.length} recipe{recipes.length !== 1 ? 's' : ''} · used when generating your meal plans
           </p>
         </div>
         <AddRecipeDialog onSaved={() => router.refresh()} />
@@ -272,7 +271,7 @@ export function RecipesClient({ recipes: initialRecipes }: Props) {
           <p className="text-2xl">📖</p>
           <p className="mt-2 font-medium text-stone-600">No recipes saved yet</p>
           <p className="mt-1 text-sm text-stone-400">
-            Add your favorites, or let Claude generate new ones when you create a meal plan
+            Add your favorites, or generate new ones when you create a meal plan
           </p>
         </div>
       ) : (

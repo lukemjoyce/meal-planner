@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
+import { LoaderCircle } from 'lucide-react'
 import { generateAIMealPlan, generateWeekGroceryList, saveWeekPlan } from '@/app/actions/planner'
 import { updateProfile } from '@/app/actions/profile'
 import { ProfileUpdateBanner } from '@/components/profile-update-banner'
@@ -122,6 +123,11 @@ export function PlannerClient({ initialPlan, recipes, profile, storeChange }: Pr
 
   return (
     <div className="space-y-6">
+      {isPending && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/60 backdrop-blur-sm">
+          <LoaderCircle className="size-12 animate-spin text-primary" />
+        </div>
+      )}
       <div className="flex items-center justify-between">
         <div>
           <h1 className="font-heading text-2xl font-bold text-foreground">Week Planner</h1>
@@ -232,7 +238,7 @@ export function PlannerClient({ initialPlan, recipes, profile, storeChange }: Pr
         <Card className="border-brand/30 bg-brand-muted">
           <CardContent className="pt-4">
             <p className="text-sm text-brand-foreground">
-              <span className="font-semibold">Claude&apos;s strategy: </span>
+              <span className="font-semibold">Plan strategy: </span>
               {explanation}
             </p>
           </CardContent>
@@ -258,9 +264,6 @@ export function PlannerClient({ initialPlan, recipes, profile, storeChange }: Pr
                           <Badge variant="secondary" className="shrink-0 text-xs capitalize">
                             {mealType}
                           </Badge>
-                          {recipe?.isAiGenerated && (
-                            <span className="text-xs font-medium text-brand-foreground">AI</span>
-                          )}
                         </div>
                         <p className="mt-1 text-sm font-medium leading-tight text-foreground">
                           {meal.recipeName}

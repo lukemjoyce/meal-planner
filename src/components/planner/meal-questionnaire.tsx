@@ -121,7 +121,7 @@ export function MealQuestionnaire({ initial, onComplete, onCancel, isSubmitting 
         </div>
         <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
           <div
-            className="bg-gradient-brand h-full rounded-full transition-all duration-300"
+            className="bg-primary h-full rounded-full transition-all duration-300"
             style={{ width: `${((step + 1) / STEP_TITLES.length) * 100}%` }}
           />
         </div>
@@ -330,7 +330,7 @@ export function MealQuestionnaire({ initial, onComplete, onCancel, isSubmitting 
           )}
           {step === LAST_STEP ? (
             <Button onClick={() => onComplete(preferences, saveToProfile)} disabled={isSubmitting}>
-              {isSubmitting ? 'Generating with Claude…' : 'Generate my plan'}
+              {isSubmitting ? 'Generating…' : 'Generate my plan'}
             </Button>
           ) : (
             <Button onClick={next} disabled={isSubmitting}>

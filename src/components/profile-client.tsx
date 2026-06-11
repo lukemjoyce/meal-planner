@@ -61,7 +61,7 @@ export function ProfileClient({ profile }: { profile: Profile }) {
     <div className="max-w-xl space-y-6">
       <h1 className="text-2xl font-bold text-stone-900">Profile & Preferences</h1>
       <p className="text-sm text-stone-500">
-        These preferences guide Claude when generating your meal plans and grocery lists.
+        These preferences guide your generated meal plans and grocery lists.
       </p>
 
       <Card>
@@ -83,7 +83,7 @@ export function ProfileClient({ profile }: { profile: Profile }) {
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Dietary Restrictions</CardTitle>
-          <CardDescription>Claude will avoid these in all generated meal plans</CardDescription>
+          <CardDescription>Avoided in all generated meal plans</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-2 gap-2">
@@ -103,7 +103,7 @@ export function ProfileClient({ profile }: { profile: Profile }) {
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Food Preferences</CardTitle>
-          <CardDescription>Help Claude understand your taste</CardDescription>
+          <CardDescription>Help us understand your taste</CardDescription>
         </CardHeader>
         <CardContent className="space-y-3">
           <div className="space-y-1.5">

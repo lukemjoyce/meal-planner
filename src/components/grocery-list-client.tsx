@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
+import { LoaderCircle } from 'lucide-react'
 import { generateWeekGroceryList } from '@/app/actions/planner'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -107,6 +108,11 @@ export function GroceryListClient({ plan, profile, storeChange }: Props) {
 
   return (
     <div className="space-y-6">
+      {isPending && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/60 backdrop-blur-sm">
+          <LoaderCircle className="size-12 animate-spin text-primary" />
+        </div>
+      )}
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-stone-900">Grocery List</h1>
@@ -248,7 +254,7 @@ export function GroceryListClient({ plan, profile, storeChange }: Props) {
           <p className="text-2xl">📋</p>
           <p className="mt-2 font-medium text-stone-600">Ready to generate</p>
           <p className="mt-1 text-sm text-stone-400">
-            Claude will analyze your week&apos;s meals and create an optimized grocery list
+            We&apos;ll analyze your week&apos;s meals and build an optimized grocery list
           </p>
         </div>
       )}
