@@ -13,7 +13,7 @@ const ROWS = 6
 
 export function HearthMarquee() {
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div aria-hidden className="pointer-events-none fixed inset-0 overflow-hidden">
       <div className="flex h-full min-h-screen flex-col">
         {Array.from({ length: ROWS }).map((_, row) => {
           const reverse = row % 2 === 1

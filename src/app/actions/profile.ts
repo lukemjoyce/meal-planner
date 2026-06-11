@@ -1,6 +1,7 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
 import { db } from '@/lib/db'
 import { getSession } from '@/lib/session'
 
@@ -12,7 +13,7 @@ async function requireAuth() {
 
 export async function getProfile() {
   const session = await requireAuth()
-  const user = await db.user.findUniqueOrThrow({
+  const user = await db.user.findUnique({
     where: { id: session.userId },
     select: {
       id: true,
@@ -26,6 +27,8 @@ export async function getProfile() {
       prefsUpdatedAt: true,
     },
   })
+  // Valid session but the user is gone (DB switch / deleted account) → log out.
+  if (!user) redirect('/api/auth/logout')
   return {
     ...user,
     dietaryRestrictions: JSON.parse(user.dietaryRestrictions) as string[],

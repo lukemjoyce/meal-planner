@@ -1,12 +1,9 @@
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/button'
-import { HearthMarquee } from '@/components/hearth-marquee'
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center">
-      {/* Scrolling photo background (pre-login only) */}
-      <HearthMarquee />
+    <main className="relative flex min-h-screen flex-col items-center justify-center px-4 text-center">
       <div className="relative z-10 max-w-2xl py-20">
         <div className="mx-auto rounded-4xl bg-background/70 px-6 py-10 shadow-xl ring-1 ring-border/50 backdrop-blur-md sm:px-10">
           <div className="bg-gradient-brand mx-auto mb-6 grid size-16 place-content-center rounded-2xl text-3xl shadow-lg shadow-primary/25">

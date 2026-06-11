@@ -1,6 +1,7 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
 import { db } from '@/lib/db'
 import { getSession } from '@/lib/session'
 import { generateMealPlan, generateGroceryList } from '@/lib/claude'
@@ -55,7 +56,8 @@ export async function generateAIMealPlan(config: {
 }) {
   const session = await requireAuth()
 
-  const user = await db.user.findUniqueOrThrow({ where: { id: session.userId } })
+  const user = await db.user.findUnique({ where: { id: session.userId } })
+  if (!user) redirect('/api/auth/logout')
   const savedRecipeRows = await db.recipe.findMany({ where: { userId: session.userId } })
 
   const preferences: UserPreferences = {
@@ -148,7 +150,8 @@ export async function generateAIMealPlan(config: {
 export async function generateWeekGroceryList() {
   const session = await requireAuth()
 
-  const user = await db.user.findUniqueOrThrow({ where: { id: session.userId } })
+  const user = await db.user.findUnique({ where: { id: session.userId } })
+  if (!user) redirect('/api/auth/logout')
   const weekStart = getMonday(new Date())
 
   const plan = await db.weekPlan.findFirst({
