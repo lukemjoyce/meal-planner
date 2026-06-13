@@ -2,6 +2,7 @@ import Anthropic from '@anthropic-ai/sdk'
 import type { GroceryStore } from './grocery-data'
 import type { Ingredient, MealPreferences, RecipeData, UserPreferences, WeekMeals } from './types'
 import { filterLibraryByDiet, compactLibraryForPrompt, getRecipeLibrary } from './recipe-library'
+import { canonicalizeIngredients } from './ingredient-graph'
 
 const client = new Anthropic()
 
@@ -287,7 +288,9 @@ export async function generateGroceryList(
       if (recipe) {
         mealsWithIngredients.push({
           mealName: `${day} ${mealType} (${meal.recipeName})`,
-          ingredients: recipe.ingredients,
+          // Canonicalize so synonyms across recipes (green onion / scallions) render
+          // identically and merge into one grocery line instead of two.
+          ingredients: canonicalizeIngredients(recipe.ingredients),
           servings: meal.servings ?? servingsPerMeal,
         })
       }

@@ -1,0 +1,2093 @@
+{
+  "normalization": {
+    "prepModifiers": [
+      "minced",
+      "diced",
+      "chopped",
+      "sliced",
+      "grated",
+      "shredded",
+      "crushed",
+      "cubed",
+      "peeled",
+      "trimmed",
+      "drained",
+      "rinsed",
+      "halved",
+      "quartered",
+      "finely",
+      "freshly",
+      "roughly",
+      "thinly",
+      "coarsely"
+    ],
+    "productModifiers": [
+      "powder",
+      "powdered",
+      "dried",
+      "fresh",
+      "ground",
+      "smoked",
+      "roasted",
+      "toasted",
+      "frozen",
+      "canned",
+      "unsalted",
+      "salted",
+      "sweetened",
+      "unsweetened",
+      "whole",
+      "skim",
+      "granulated"
+    ],
+    "measureWords": [
+      "cup",
+      "cups",
+      "tbsp",
+      "tablespoon",
+      "tablespoons",
+      "tsp",
+      "teaspoon",
+      "teaspoons",
+      "oz",
+      "ounce",
+      "ounces",
+      "lb",
+      "lbs",
+      "pound",
+      "pounds",
+      "g",
+      "gram",
+      "grams",
+      "kg",
+      "ml",
+      "l",
+      "liter",
+      "liters",
+      "clove",
+      "cloves",
+      "can",
+      "cans",
+      "package",
+      "packages",
+      "pkg",
+      "pinch",
+      "dash",
+      "bunch",
+      "head",
+      "stick",
+      "sticks",
+      "jar",
+      "container"
+    ]
+  },
+  "ingredients": {
+    "garlic": {
+      "aliases": [
+        "fresh garlic",
+        "garlic clove",
+        "garlic cloves",
+        "clove of garlic",
+        "cloves of garlic"
+      ],
+      "substitutes": [
+        {
+          "to": "garlic powder",
+          "qualityCost": 0.6,
+          "ratio": 0.125,
+          "fromUnit": "clove",
+          "toUnit": "tsp"
+        }
+      ]
+    },
+    "garlic powder": {
+      "aliases": [
+        "granulated garlic"
+      ],
+      "substitutes": []
+    },
+    "yellow onion": {
+      "aliases": [
+        "onion",
+        "onions",
+        "yellow onions",
+        "brown onion",
+        "brown onions"
+      ],
+      "substitutes": [
+        {
+          "to": "shallot",
+          "qualityCost": 0.45,
+          "ratio": 1
+        }
+      ]
+    },
+    "shallot": {
+      "aliases": [
+        "shallots"
+      ],
+      "substitutes": [
+        {
+          "to": "yellow onion",
+          "qualityCost": 0.4,
+          "ratio": 1
+        }
+      ]
+    },
+    "scallion": {
+      "aliases": [
+        "scallions",
+        "green onion",
+        "green onions",
+        "spring onion",
+        "spring onions"
+      ],
+      "substitutes": [
+        {
+          "to": "shallot",
+          "qualityCost": 0.5,
+          "ratio": 1
+        }
+      ]
+    },
+    "creme fraiche": {
+      "aliases": [
+        "crème fraîche",
+        "crema"
+      ],
+      "substitutes": [
+        {
+          "to": "sour cream",
+          "qualityCost": 0.2,
+          "ratio": 1
+        }
+      ]
+    },
+    "sour cream": {
+      "aliases": [
+        "light sour cream"
+      ],
+      "substitutes": [
+        {
+          "to": "greek yogurt",
+          "qualityCost": 0.3,
+          "ratio": 1
+        }
+      ]
+    },
+    "greek yogurt": {
+      "aliases": [
+        "greek yoghurt",
+        "plain greek yogurt"
+      ],
+      "substitutes": []
+    },
+    "eggs": {
+      "aliases": [
+        "egg",
+        "large eggs",
+        "large egg",
+        "free range eggs",
+        "free-range eggs"
+      ],
+      "substitutes": []
+    },
+    "cilantro": {
+      "aliases": [
+        "coriander",
+        "fresh coriander",
+        "coriander leaves",
+        "fresh cilantro"
+      ],
+      "substitutes": []
+    },
+    "ground beef": {
+      "aliases": [
+        "minced beef",
+        "ground chuck",
+        "lean ground beef"
+      ],
+      "substitutes": [
+        {
+          "to": "ground turkey",
+          "qualityCost": 0.4,
+          "ratio": 1
+        }
+      ]
+    },
+    "ground turkey": {
+      "aliases": [
+        "minced turkey"
+      ],
+      "substitutes": []
+    },
+    "chicken breast": {
+      "aliases": [
+        "chicken breasts",
+        "boneless skinless chicken breast",
+        "boneless chicken breast",
+        "skinless chicken breast"
+      ],
+      "substitutes": [
+        {
+          "to": "chicken thigh",
+          "qualityCost": 0.35,
+          "ratio": 1
+        }
+      ]
+    },
+    "chicken thigh": {
+      "aliases": [
+        "chicken thighs",
+        "boneless skinless chicken thighs"
+      ],
+      "substitutes": []
+    },
+    "acini di pepe pasta": {
+      "aliases": [
+        "acini de pepe pasta",
+        "acini di pepe"
+      ],
+      "substitutes": []
+    },
+    "acorn squash": {
+      "aliases": [
+        "acorn squashes"
+      ],
+      "substitutes": []
+    },
+    "almond butter": {
+      "aliases": [],
+      "substitutes": []
+    },
+    "almond flour": {
+      "aliases": [
+        "ground almonds"
+      ],
+      "substitutes": []
+    },
+    "almond milk": {
+      "aliases": [],
+      "substitutes": []
+    },
+    "andouille sausage": {
+      "aliases": [
+        "andouille"
+      ],
+      "substitutes": []
+    },
+    "arborio rice": {
+      "aliases": [
+        "risotto rice"
+      ],
+      "substitutes": []
+    },
+    "asparagus": {
+      "aliases": [
+        "asparagus spears"
+      ],
+      "substitutes": []
+    },
+    "avocado": {
+      "aliases": [
+        "avocados"
+      ],
+      "substitutes": []
+    },
+    "bacon": {
+      "aliases": [
+        "bacon rashers",
+        "bacon strips"
+      ],
+      "substitutes": []
+    },
+    "bagels": {
+      "aliases": [
+        "bagel"
+      ],
+      "substitutes": []
+    },
+    "baguette": {
+      "aliases": [
+        "french baguette"
+      ],
+      "substitutes": []
+    },
+    "baking powder": {
+      "aliases": [],
+      "substitutes": []
+    },
+    "balsamic glaze": {
+      "aliases": [
+        "balsamic reduction"
+      ],
+      "substitutes": []
+    },
+    "balsamic vinegar": {
+      "aliases": [],
+      "substitutes": []
+    },
+    "banana": {
+      "aliases": [
+        "bananas"
+      ],
+      "substitutes": []
+    },
+    "barbecue sauce": {
+      "aliases": [
+        "barbeque sauce",
+        "bbq sauce"
+      ],
+      "substitutes": []
+    },
+    "basil": {
+      "aliases": [
+        "basil leaves",
+        "fresh basil"
+      ],
+      "substitutes": []
+    },
+    "basil pesto": {
+      "aliases": [
+        "pesto",
+        "pesto sauce"
+      ],
+      "substitutes": []
+    },
+    "bean sprouts": {
+      "aliases": [
+        "bean sprout",
+        "mung bean sprouts"
+      ],
+      "substitutes": []
+    },
+    "beef broth": {
+      "aliases": [
+        "beef bouillon",
+        "beef stock"
+      ],
+      "substitutes": []
+    },
+    "beef short ribs": {
+      "aliases": [
+        "bone-in short ribs",
+        "short ribs"
+      ],
+      "substitutes": []
+    },
+    "bell pepper": {
+      "aliases": [
+        "bell peppers",
+        "capsicum",
+        "sweet pepper"
+      ],
+      "substitutes": []
+    },
+    "black beans": {
+      "aliases": [
+        "black bean",
+        "canned black beans",
+        "dried black beans"
+      ],
+      "substitutes": []
+    },
+    "black pepper": {
+      "aliases": [
+        "cracked black pepper",
+        "ground black pepper",
+        "peppercorns"
+      ],
+      "substitutes": []
+    },
+    "blue cheese crumbles": {
+      "aliases": [
+        "bleu cheese",
+        "bleu cheese crumbles",
+        "blue cheese"
+      ],
+      "substitutes": []
+    },
+    "blueberry": {
+      "aliases": [
+        "blueberries",
+        "fresh blueberries"
+      ],
+      "substitutes": []
+    },
+    "bok choy": {
+      "aliases": [
+        "baby bok choy",
+        "bok choi",
+        "pak choi"
+      ],
+      "substitutes": []
+    },
+    "bone-in ham": {
+      "aliases": [
+        "smoked ham",
+        "whole ham"
+      ],
+      "substitutes": []
+    },
+    "bread": {
+      "aliases": [
+        "loaf of bread",
+        "sliced bread",
+        "white bread"
+      ],
+      "substitutes": []
+    },
+    "breadcrumbs": {
+      "aliases": [
+        "bread crumbs",
+        "dried breadcrumbs",
+        "plain breadcrumbs"
+      ],
+      "substitutes": []
+    },
+    "breakfast sausage": {
+      "aliases": [
+        "breakfast sausage links",
+        "breakfast sausage patties",
+        "breakfast sausages"
+      ],
+      "substitutes": []
+    },
+    "brioche bread": {
+      "aliases": [
+        "brioche loaf"
+      ],
+      "substitutes": []
+    },
+    "brioche buns": {
+      "aliases": [
+        "brioche burger buns",
+        "brioche rolls"
+      ],
+      "substitutes": []
+    },
+    "broccoli": {
+      "aliases": [
+        "broccoli crowns",
+        "broccoli florets"
+      ],
+      "substitutes": []
+    },
+    "brown lentils": {
+      "aliases": [
+        "dried brown lentils",
+        "lentils"
+      ],
+      "substitutes": []
+    },
+    "brown sugar": {
+      "aliases": [
+        "dark brown sugar",
+        "light brown sugar",
+        "packed brown sugar"
+      ],
+      "substitutes": []
+    },
+    "buffalo sauce": {
+      "aliases": [
+        "buffalo wing sauce",
+        "hot buffalo sauce"
+      ],
+      "substitutes": []
+    },
+    "bulgur wheat": {
+      "aliases": [
+        "bulgar",
+        "bulgar wheat",
+        "bulgur",
+        "cracked wheat"
+      ],
+      "substitutes": []
+    },
+    "burger buns": {
+      "aliases": [
+        "burger bun",
+        "hamburger bun",
+        "hamburger buns",
+        "sandwich buns"
+      ],
+      "substitutes": []
+    },
+    "butter": {
+      "aliases": [
+        "salted butter",
+        "stick butter",
+        "unsalted butter"
+      ],
+      "substitutes": []
+    },
+    "butter lettuce": {
+      "aliases": [
+        "bibb lettuce",
+        "boston lettuce",
+        "butterhead lettuce"
+      ],
+      "substitutes": []
+    },
+    "buttermilk": {
+      "aliases": [
+        "cultured buttermilk",
+        "low-fat buttermilk"
+      ],
+      "substitutes": []
+    },
+    "cabbage": {
+      "aliases": [
+        "green cabbage",
+        "head of cabbage",
+        "shredded cabbage"
+      ],
+      "substitutes": []
+    },
+    "caesar dressing": {
+      "aliases": [
+        "caesar salad dressing",
+        "creamy caesar dressing"
+      ],
+      "substitutes": []
+    },
+    "cajun seasoning": {
+      "aliases": [
+        "cajun seasoning blend",
+        "cajun spice",
+        "cajun spice blend"
+      ],
+      "substitutes": []
+    },
+    "canned clams": {
+      "aliases": [
+        "canned clam",
+        "chopped canned clams",
+        "clams in a can",
+        "minced canned clams"
+      ],
+      "substitutes": []
+    },
+    "canned diced tomatoes": {
+      "aliases": [
+        "canned diced tomato",
+        "diced canned tomatoes",
+        "diced tomato",
+        "diced tomatoes",
+        "tinned diced tomatoes"
+      ],
+      "substitutes": []
+    },
+    "canned salmon": {
+      "aliases": [
+        "canned salmon fillet",
+        "salmon in a can",
+        "tinned salmon"
+      ],
+      "substitutes": []
+    },
+    "canned tuna": {
+      "aliases": [
+        "canned tuna fish",
+        "tinned tuna",
+        "tuna in a can",
+        "tuna in oil",
+        "tuna in water"
+      ],
+      "substitutes": []
+    },
+    "cannellini beans": {
+      "aliases": [
+        "canned cannellini beans",
+        "cannellini bean",
+        "white kidney bean",
+        "white kidney beans"
+      ],
+      "substitutes": []
+    },
+    "carrot": {
+      "aliases": [
+        "baby carrots",
+        "carrots",
+        "whole carrots"
+      ],
+      "substitutes": []
+    },
+    "cauliflower": {
+      "aliases": [
+        "cauliflower florets",
+        "cauliflower head",
+        "whole cauliflower"
+      ],
+      "substitutes": []
+    },
+    "cauliflower rice": {
+      "aliases": [
+        "cauliflower rice crumbles",
+        "riced cauliflower"
+      ],
+      "substitutes": []
+    },
+    "cayenne": {
+      "aliases": [
+        "cayenne pepper",
+        "cayenne powder",
+        "ground cayenne",
+        "red cayenne pepper"
+      ],
+      "substitutes": []
+    },
+    "celery": {
+      "aliases": [
+        "celery rib",
+        "celery ribs",
+        "celery stalk",
+        "celery stalks"
+      ],
+      "substitutes": []
+    },
+    "cheddar cheese": {
+      "aliases": [
+        "cheddar",
+        "mild cheddar",
+        "sharp cheddar",
+        "shredded cheddar",
+        "shredded cheddar cheese"
+      ],
+      "substitutes": []
+    },
+    "cheese tortellini": {
+      "aliases": [
+        "cheese-filled tortellini",
+        "fresh tortellini",
+        "frozen tortellini",
+        "tortellini"
+      ],
+      "substitutes": []
+    },
+    "cherry tomato": {
+      "aliases": [
+        "cherry tomatoes",
+        "grape tomato",
+        "grape tomatoes"
+      ],
+      "substitutes": []
+    },
+    "chia seeds": {
+      "aliases": [
+        "chia seed"
+      ],
+      "substitutes": []
+    },
+    "chicken broth": {
+      "aliases": [
+        "chicken bone broth",
+        "chicken broth/stock",
+        "chicken stock",
+        "low-sodium chicken broth"
+      ],
+      "substitutes": []
+    },
+    "chickpeas": {
+      "aliases": [
+        "canned chickpeas",
+        "chickpea",
+        "dried chickpeas",
+        "garbanzo bean",
+        "garbanzo beans"
+      ],
+      "substitutes": []
+    },
+    "chili powder": {
+      "aliases": [
+        "chili seasoning",
+        "chili spice"
+      ],
+      "substitutes": []
+    },
+    "chipotle in adobo": {
+      "aliases": [
+        "canned chipotle in adobo",
+        "chipotle pepper in adobo sauce",
+        "chipotle peppers in adobo",
+        "chipotles in adobo"
+      ],
+      "substitutes": []
+    },
+    "chives": {
+      "aliases": [
+        "chive",
+        "dried chives",
+        "fresh chives"
+      ],
+      "substitutes": []
+    },
+    "chuck roast": {
+      "aliases": [
+        "beef chuck",
+        "beef chuck roast",
+        "chuck pot roast",
+        "chuck steak",
+        "pot roast"
+      ],
+      "substitutes": []
+    },
+    "ciabatta rolls": {
+      "aliases": [
+        "ciabatta",
+        "ciabatta bread rolls",
+        "ciabatta roll"
+      ],
+      "substitutes": []
+    },
+    "cinnamon": {
+      "aliases": [
+        "cinnamon powder",
+        "ground cinnamon"
+      ],
+      "substitutes": []
+    },
+    "cloves": {
+      "aliases": [
+        "clove",
+        "ground cloves",
+        "whole cloves"
+      ],
+      "substitutes": []
+    },
+    "coconut milk": {
+      "aliases": [
+        "canned coconut milk",
+        "coconut milk (canned)",
+        "full-fat coconut milk",
+        "lite coconut milk"
+      ],
+      "substitutes": []
+    },
+    "cod fillet": {
+      "aliases": [
+        "cod",
+        "cod fillets",
+        "fresh cod",
+        "frozen cod fillet",
+        "pacific cod"
+      ],
+      "substitutes": []
+    },
+    "corn": {
+      "aliases": [
+        "canned corn",
+        "corn kernels",
+        "frozen corn",
+        "sweet corn",
+        "whole kernel corn"
+      ],
+      "substitutes": []
+    },
+    "corn tortillas": {
+      "aliases": [
+        "corn tortilla",
+        "small corn tortillas",
+        "yellow corn tortillas"
+      ],
+      "substitutes": []
+    },
+    "cornstarch": {
+      "aliases": [
+        "corn flour",
+        "corn starch",
+        "cornflour"
+      ],
+      "substitutes": []
+    },
+    "couscous": {
+      "aliases": [
+        "israeli couscous",
+        "pearl couscous",
+        "whole wheat couscous"
+      ],
+      "substitutes": []
+    },
+    "cream cheese": {
+      "aliases": [
+        "full-fat cream cheese",
+        "low-fat cream cheese",
+        "whipped cream cheese"
+      ],
+      "substitutes": []
+    },
+    "cream of mushroom soup": {
+      "aliases": [
+        "canned cream of mushroom soup",
+        "condensed cream of mushroom soup",
+        "cream of mushroom"
+      ],
+      "substitutes": []
+    },
+    "croutons": {
+      "aliases": [
+        "crouton",
+        "garlic croutons",
+        "salad croutons"
+      ],
+      "substitutes": []
+    },
+    "crusty bread": {
+      "aliases": [
+        "artisan bread",
+        "country bread",
+        "crusty loaf",
+        "rustic bread"
+      ],
+      "substitutes": []
+    },
+    "cucumber": {
+      "aliases": [
+        "cucumbers",
+        "english cucumber",
+        "persian cucumber"
+      ],
+      "substitutes": []
+    },
+    "cumin": {
+      "aliases": [
+        "cumin powder",
+        "cumin seeds",
+        "ground cumin"
+      ],
+      "substitutes": []
+    },
+    "curry powder": {
+      "aliases": [
+        "curry mix",
+        "curry spice"
+      ],
+      "substitutes": []
+    },
+    "dijon mustard": {
+      "aliases": [
+        "dijon",
+        "french mustard"
+      ],
+      "substitutes": []
+    },
+    "dill": {
+      "aliases": [
+        "dill fronds",
+        "dill weed",
+        "dried dill",
+        "fresh dill"
+      ],
+      "substitutes": []
+    },
+    "ditalini pasta": {
+      "aliases": [
+        "ditali",
+        "ditali pasta",
+        "ditalini"
+      ],
+      "substitutes": []
+    },
+    "dried apricots": {
+      "aliases": [
+        "apricots dried",
+        "dried apricot"
+      ],
+      "substitutes": []
+    },
+    "dried cranberries": {
+      "aliases": [
+        "craisins",
+        "dried cranberry",
+        "sweetened dried cranberries"
+      ],
+      "substitutes": []
+    },
+    "egg noodles": {
+      "aliases": [
+        "broad egg noodles",
+        "egg noodle",
+        "wide egg noodles"
+      ],
+      "substitutes": []
+    },
+    "eggplant": {
+      "aliases": [
+        "aubergine",
+        "brinjal",
+        "eggplants"
+      ],
+      "substitutes": []
+    },
+    "enchilada sauce": {
+      "aliases": [
+        "canned enchilada sauce",
+        "green enchilada sauce",
+        "red enchilada sauce"
+      ],
+      "substitutes": []
+    },
+    "farro": {
+      "aliases": [
+        "farro grain",
+        "pearled farro",
+        "semi-pearled farro",
+        "whole farro"
+      ],
+      "substitutes": []
+    },
+    "feta cheese": {
+      "aliases": [
+        "crumbled feta",
+        "feta",
+        "feta crumbles",
+        "greek feta"
+      ],
+      "substitutes": []
+    },
+    "fettuccine pasta": {
+      "aliases": [
+        "fettuccine",
+        "fettuccini",
+        "fettucine",
+        "fettucine pasta"
+      ],
+      "substitutes": []
+    },
+    "firm tofu": {
+      "aliases": [
+        "extra firm tofu",
+        "pressed tofu",
+        "tofu"
+      ],
+      "substitutes": []
+    },
+    "fish sauce": {
+      "aliases": [
+        "nam pla",
+        "nuoc mam"
+      ],
+      "substitutes": []
+    },
+    "flank steak": {
+      "aliases": [
+        "beef flank steak",
+        "flank",
+        "flank steak beef"
+      ],
+      "substitutes": []
+    },
+    "flour": {
+      "aliases": [
+        "all-purpose flour",
+        "ap flour",
+        "plain flour",
+        "white flour"
+      ],
+      "substitutes": []
+    },
+    "flour tortillas": {
+      "aliases": [
+        "burrito tortillas",
+        "flour tortilla",
+        "large flour tortillas",
+        "soft tortillas"
+      ],
+      "substitutes": []
+    },
+    "fresh mozzarella": {
+      "aliases": [
+        "buffalo mozzarella",
+        "fresh mozzarella cheese",
+        "mozzarella ball",
+        "mozzarella di bufala"
+      ],
+      "substitutes": []
+    },
+    "garam masala": {
+      "aliases": [
+        "garam masala blend",
+        "garam masala spice"
+      ],
+      "substitutes": []
+    },
+    "ginger": {
+      "aliases": [
+        "fresh ginger",
+        "ginger root",
+        "ground ginger",
+        "minced ginger"
+      ],
+      "substitutes": []
+    },
+    "gouda cheese": {
+      "aliases": [
+        "aged gouda",
+        "gouda",
+        "gouda slices",
+        "smoked gouda"
+      ],
+      "substitutes": []
+    },
+    "granola": {
+      "aliases": [
+        "crunchy granola",
+        "granola clusters",
+        "oat granola"
+      ],
+      "substitutes": []
+    },
+    "green beans": {
+      "aliases": [
+        "french beans",
+        "green bean",
+        "haricots verts",
+        "string bean",
+        "string beans"
+      ],
+      "substitutes": []
+    },
+    "green chiles": {
+      "aliases": [
+        "anaheim chiles",
+        "canned green chiles",
+        "diced green chiles",
+        "green chile",
+        "hatch green chiles"
+      ],
+      "substitutes": []
+    },
+    "grits": {
+      "aliases": [
+        "corn grits",
+        "hominy grits",
+        "quick grits",
+        "stone ground grits"
+      ],
+      "substitutes": []
+    },
+    "ground chicken": {
+      "aliases": [
+        "ground chicken breast",
+        "minced chicken"
+      ],
+      "substitutes": []
+    },
+    "ground pork": {
+      "aliases": [
+        "minced pork",
+        "pork mince"
+      ],
+      "substitutes": []
+    },
+    "gruyere cheese": {
+      "aliases": [
+        "gruyere",
+        "gruyère",
+        "gruyère cheese",
+        "swiss gruyere"
+      ],
+      "substitutes": []
+    },
+    "halloumi cheese": {
+      "aliases": [
+        "grilling cheese",
+        "halloumi",
+        "haloumi"
+      ],
+      "substitutes": []
+    },
+    "ham": {
+      "aliases": [
+        "cooked ham",
+        "deli ham",
+        "ham steak",
+        "sliced ham"
+      ],
+      "substitutes": []
+    },
+    "havarti cheese": {
+      "aliases": [
+        "danish havarti",
+        "havarti",
+        "havarti slices"
+      ],
+      "substitutes": []
+    },
+    "heavy cream": {
+      "aliases": [
+        "double cream",
+        "heavy whipping cream",
+        "thickened cream",
+        "whipping cream"
+      ],
+      "substitutes": []
+    },
+    "hoagie rolls": {
+      "aliases": [
+        "hero bread",
+        "hero rolls",
+        "hoagie roll",
+        "sandwich rolls",
+        "sub roll",
+        "sub rolls"
+      ],
+      "substitutes": []
+    },
+    "honey": {
+      "aliases": [
+        "clover honey",
+        "pure honey",
+        "raw honey"
+      ],
+      "substitutes": []
+    },
+    "hummus": {
+      "aliases": [
+        "homemade hummus",
+        "houmous",
+        "store-bought hummus"
+      ],
+      "substitutes": []
+    },
+    "italian sausage": {
+      "aliases": [
+        "hot italian sausage",
+        "italian pork sausage",
+        "mild italian sausage",
+        "sweet italian sausage"
+      ],
+      "substitutes": []
+    },
+    "italian seasoning": {
+      "aliases": [
+        "italian herb seasoning",
+        "italian herbs",
+        "italian spice blend"
+      ],
+      "substitutes": []
+    },
+    "jalapeno": {
+      "aliases": [
+        "jalapeno pepper",
+        "jalapenos",
+        "jalapeño",
+        "jalapeño pepper",
+        "jalapeños"
+      ],
+      "substitutes": []
+    },
+    "jumbo pasta shells": {
+      "aliases": [
+        "jumbo shells",
+        "large pasta shells",
+        "stuffing shells"
+      ],
+      "substitutes": []
+    },
+    "kalamata olives": {
+      "aliases": [
+        "black olives",
+        "kalamata olive",
+        "pitted kalamata olives"
+      ],
+      "substitutes": []
+    },
+    "kale": {
+      "aliases": [
+        "curly kale",
+        "dinosaur kale",
+        "lacinato kale",
+        "tuscan kale"
+      ],
+      "substitutes": []
+    },
+    "ketchup": {
+      "aliases": [
+        "catsup",
+        "tomato ketchup"
+      ],
+      "substitutes": []
+    },
+    "kidney beans": {
+      "aliases": [
+        "canned kidney beans",
+        "canned red kidney beans",
+        "kidney bean",
+        "red beans",
+        "red kidney bean",
+        "red kidney beans"
+      ],
+      "substitutes": []
+    },
+    "lamb shoulder": {
+      "aliases": [
+        "bone-in lamb shoulder",
+        "boneless lamb shoulder",
+        "shoulder of lamb"
+      ],
+      "substitutes": []
+    },
+    "lasagna noodles": {
+      "aliases": [
+        "lasagna pasta",
+        "lasagna sheets",
+        "lasagne noodles",
+        "lasagne sheets"
+      ],
+      "substitutes": []
+    },
+    "lettuce": {
+      "aliases": [
+        "green leaf lettuce",
+        "iceberg lettuce",
+        "red leaf lettuce"
+      ],
+      "substitutes": []
+    },
+    "lime": {
+      "aliases": [
+        "fresh lime",
+        "key lime",
+        "limes"
+      ],
+      "substitutes": []
+    },
+    "mango": {
+      "aliases": [
+        "fresh mango",
+        "mangoes",
+        "mangos"
+      ],
+      "substitutes": []
+    },
+    "maple syrup": {
+      "aliases": [
+        "pure maple syrup"
+      ],
+      "substitutes": []
+    },
+    "marinara sauce": {
+      "aliases": [
+        "jarred marinara",
+        "marinara",
+        "pasta sauce",
+        "tomato marinara"
+      ],
+      "substitutes": []
+    },
+    "marsala wine": {
+      "aliases": [
+        "dry marsala wine",
+        "marsala cooking wine",
+        "sweet marsala wine"
+      ],
+      "substitutes": []
+    },
+    "mayonnaise": {
+      "aliases": [
+        "mayo"
+      ],
+      "substitutes": []
+    },
+    "milk": {
+      "aliases": [
+        "2% milk",
+        "dairy milk",
+        "skim milk",
+        "whole milk"
+      ],
+      "substitutes": []
+    },
+    "mint": {
+      "aliases": [
+        "fresh mint",
+        "mint leaves",
+        "peppermint leaves",
+        "spearmint"
+      ],
+      "substitutes": []
+    },
+    "mixed vegetables": {
+      "aliases": [
+        "frozen mixed vegetables",
+        "mixed veggies",
+        "vegetable medley"
+      ],
+      "substitutes": []
+    },
+    "mozzarella cheese": {
+      "aliases": [
+        "low-moisture mozzarella",
+        "mozzarella",
+        "mozzarella shreds",
+        "shredded mozzarella"
+      ],
+      "substitutes": []
+    },
+    "multigrain bread": {
+      "aliases": [
+        "multi-grain bread",
+        "multigrain loaf",
+        "seeded bread",
+        "whole grain bread"
+      ],
+      "substitutes": []
+    },
+    "mushroom": {
+      "aliases": [
+        "baby bella mushrooms",
+        "button mushrooms",
+        "cremini mushrooms",
+        "mushrooms",
+        "white mushrooms"
+      ],
+      "substitutes": []
+    },
+    "mussels": {
+      "aliases": [
+        "fresh mussels",
+        "live mussels",
+        "mussel"
+      ],
+      "substitutes": []
+    },
+    "naan flatbread": {
+      "aliases": [
+        "flatbread naan",
+        "naan",
+        "naan bread"
+      ],
+      "substitutes": []
+    },
+    "nutmeg": {
+      "aliases": [
+        "ground nutmeg",
+        "whole nutmeg"
+      ],
+      "substitutes": []
+    },
+    "olive oil": {
+      "aliases": [
+        "EVOO",
+        "extra virgin olive oil",
+        "light olive oil",
+        "pure olive oil"
+      ],
+      "substitutes": []
+    },
+    "orange": {
+      "aliases": [
+        "fresh orange",
+        "navel orange",
+        "oranges"
+      ],
+      "substitutes": []
+    },
+    "orange juice": {
+      "aliases": [
+        "100% orange juice",
+        "OJ",
+        "fresh orange juice"
+      ],
+      "substitutes": []
+    },
+    "oregano": {
+      "aliases": [
+        "dried oregano",
+        "fresh oregano",
+        "mexican oregano",
+        "oregano leaves"
+      ],
+      "substitutes": []
+    },
+    "orzo pasta": {
+      "aliases": [
+        "orzo",
+        "orzo noodles",
+        "risoni"
+      ],
+      "substitutes": []
+    },
+    "paella rice": {
+      "aliases": [
+        "bomba rice",
+        "calasparra rice",
+        "spanish rice for paella"
+      ],
+      "substitutes": []
+    },
+    "panko breadcrumbs": {
+      "aliases": [
+        "japanese breadcrumbs",
+        "panko",
+        "panko bread crumbs",
+        "panko crumbs"
+      ],
+      "substitutes": []
+    },
+    "paprika": {
+      "aliases": [
+        "hot paprika",
+        "hungarian paprika",
+        "sweet paprika"
+      ],
+      "substitutes": []
+    },
+    "parmesan cheese": {
+      "aliases": [
+        "grated parmesan",
+        "parm",
+        "parmesan",
+        "parmigiano-reggiano",
+        "shredded parmesan"
+      ],
+      "substitutes": []
+    },
+    "parsley": {
+      "aliases": [
+        "curly parsley",
+        "dried parsley",
+        "flat-leaf parsley",
+        "fresh parsley",
+        "italian parsley"
+      ],
+      "substitutes": []
+    },
+    "peanut butter": {
+      "aliases": [
+        "creamy peanut butter",
+        "crunchy peanut butter",
+        "natural peanut butter"
+      ],
+      "substitutes": []
+    },
+    "peanuts": {
+      "aliases": [
+        "dry roasted peanuts",
+        "groundnuts",
+        "peanut",
+        "roasted peanuts",
+        "salted peanuts"
+      ],
+      "substitutes": []
+    },
+    "peas": {
+      "aliases": [
+        "fresh peas",
+        "frozen peas",
+        "garden peas",
+        "green peas",
+        "sweet peas"
+      ],
+      "substitutes": []
+    },
+    "peas and carrots": {
+      "aliases": [
+        "frozen peas and carrots",
+        "mixed peas and carrots",
+        "peas & carrots"
+      ],
+      "substitutes": []
+    },
+    "pecans": {
+      "aliases": [
+        "chopped pecans",
+        "pecan",
+        "pecan halves",
+        "toasted pecans"
+      ],
+      "substitutes": []
+    },
+    "penne pasta": {
+      "aliases": [
+        "penne",
+        "penne noodles",
+        "penne rigate"
+      ],
+      "substitutes": []
+    },
+    "pie crust": {
+      "aliases": [
+        "pastry crust",
+        "pie shell",
+        "pre-made pie crust",
+        "refrigerated pie crust",
+        "shortcrust pastry"
+      ],
+      "substitutes": []
+    },
+    "pineapple": {
+      "aliases": [
+        "fresh pineapple",
+        "pineapples"
+      ],
+      "substitutes": []
+    },
+    "pinto beans": {
+      "aliases": [
+        "canned pinto beans",
+        "dried pinto beans",
+        "pinto bean"
+      ],
+      "substitutes": []
+    },
+    "pizza dough": {
+      "aliases": [
+        "fresh pizza dough",
+        "pizza dough ball"
+      ],
+      "substitutes": []
+    },
+    "pork chops": {
+      "aliases": [
+        "bone-in pork chops",
+        "boneless pork chops",
+        "pork chop"
+      ],
+      "substitutes": []
+    },
+    "pork loin": {
+      "aliases": [
+        "pork loin roast",
+        "pork tenderloin"
+      ],
+      "substitutes": []
+    },
+    "pork shanks": {
+      "aliases": [
+        "ham hock",
+        "pork shank"
+      ],
+      "substitutes": []
+    },
+    "pork shoulder": {
+      "aliases": [
+        "boston butt",
+        "pork butt",
+        "pulled pork shoulder"
+      ],
+      "substitutes": []
+    },
+    "portobello mushroom": {
+      "aliases": [
+        "portabella mushroom",
+        "portabella mushrooms",
+        "portobello",
+        "portobello mushrooms"
+      ],
+      "substitutes": []
+    },
+    "potato": {
+      "aliases": [
+        "potatoes",
+        "russet potato",
+        "russet potatoes",
+        "white potato"
+      ],
+      "substitutes": []
+    },
+    "potato gnocchi": {
+      "aliases": [
+        "fresh gnocchi",
+        "gnocchi"
+      ],
+      "substitutes": []
+    },
+    "provolone cheese": {
+      "aliases": [
+        "provolone",
+        "sliced provolone"
+      ],
+      "substitutes": []
+    },
+    "pumpkin puree": {
+      "aliases": [
+        "canned pumpkin",
+        "canned pumpkin puree",
+        "pumpkin puree canned"
+      ],
+      "substitutes": []
+    },
+    "quinoa": {
+      "aliases": [
+        "tri-color quinoa",
+        "white quinoa"
+      ],
+      "substitutes": []
+    },
+    "ramen noodles": {
+      "aliases": [
+        "dried ramen noodles",
+        "fresh ramen noodles",
+        "instant ramen noodles",
+        "ramen"
+      ],
+      "substitutes": []
+    },
+    "ranch dressing": {
+      "aliases": [
+        "ranch",
+        "ranch dip"
+      ],
+      "substitutes": []
+    },
+    "red curry paste": {
+      "aliases": [
+        "thai red curry paste"
+      ],
+      "substitutes": []
+    },
+    "red lentils": {
+      "aliases": [
+        "dried red lentils",
+        "red lentil",
+        "split red lentils"
+      ],
+      "substitutes": []
+    },
+    "red onion": {
+      "aliases": [
+        "purple onion",
+        "red onions"
+      ],
+      "substitutes": []
+    },
+    "red pepper flakes": {
+      "aliases": [
+        "chili flakes",
+        "crushed red pepper",
+        "crushed red pepper flakes",
+        "dried red pepper flakes"
+      ],
+      "substitutes": []
+    },
+    "red wine": {
+      "aliases": [
+        "dry red wine",
+        "red cooking wine"
+      ],
+      "substitutes": []
+    },
+    "refried beans": {
+      "aliases": [
+        "canned refried beans",
+        "refried pinto beans"
+      ],
+      "substitutes": []
+    },
+    "ribeye steak": {
+      "aliases": [
+        "rib eye",
+        "rib eye steak",
+        "rib-eye steak",
+        "ribeye"
+      ],
+      "substitutes": []
+    },
+    "rice noodles": {
+      "aliases": [
+        "dried rice noodles",
+        "flat rice noodles",
+        "rice stick noodles",
+        "rice vermicelli"
+      ],
+      "substitutes": []
+    },
+    "rice vinegar": {
+      "aliases": [
+        "rice wine vinegar",
+        "seasoned rice vinegar"
+      ],
+      "substitutes": []
+    },
+    "ricotta cheese": {
+      "aliases": [
+        "ricotta",
+        "whole milk ricotta"
+      ],
+      "substitutes": []
+    },
+    "rolled oats": {
+      "aliases": [
+        "oatmeal",
+        "oats",
+        "old-fashioned oats",
+        "whole rolled oats"
+      ],
+      "substitutes": []
+    },
+    "romaine lettuce": {
+      "aliases": [
+        "cos lettuce",
+        "romaine",
+        "romaine hearts"
+      ],
+      "substitutes": []
+    },
+    "rosemary": {
+      "aliases": [
+        "dried rosemary",
+        "fresh rosemary",
+        "rosemary sprigs"
+      ],
+      "substitutes": []
+    },
+    "rotini pasta": {
+      "aliases": [
+        "fusilli",
+        "fusilli pasta",
+        "rotini",
+        "spiral pasta"
+      ],
+      "substitutes": []
+    },
+    "rye bread": {
+      "aliases": [
+        "dark rye bread",
+        "sliced rye bread"
+      ],
+      "substitutes": []
+    },
+    "saffron": {
+      "aliases": [
+        "saffron strands",
+        "saffron threads"
+      ],
+      "substitutes": []
+    },
+    "salami": {
+      "aliases": [
+        "genoa salami",
+        "hard salami",
+        "italian salami"
+      ],
+      "substitutes": []
+    },
+    "salmon fillet": {
+      "aliases": [
+        "atlantic salmon fillet",
+        "fresh salmon",
+        "salmon",
+        "salmon fillets"
+      ],
+      "substitutes": []
+    },
+    "salsa": {
+      "aliases": [
+        "fresh salsa",
+        "jarred salsa",
+        "pico de gallo",
+        "tomato salsa"
+      ],
+      "substitutes": []
+    },
+    "salt": {
+      "aliases": [
+        "fine salt",
+        "kosher salt",
+        "sea salt",
+        "table salt"
+      ],
+      "substitutes": []
+    },
+    "sandwich bread": {
+      "aliases": [
+        "sandwich loaf",
+        "sliced bread",
+        "white bread",
+        "white sandwich bread"
+      ],
+      "substitutes": []
+    },
+    "sesame oil": {
+      "aliases": [
+        "dark sesame oil",
+        "sesame seed oil",
+        "toasted sesame oil"
+      ],
+      "substitutes": []
+    },
+    "sesame seeds": {
+      "aliases": [
+        "sesame seed",
+        "toasted sesame seeds",
+        "white sesame seeds"
+      ],
+      "substitutes": []
+    },
+    "shrimp": {
+      "aliases": [
+        "jumbo shrimp",
+        "large shrimp",
+        "prawns",
+        "raw shrimp",
+        "shrimps"
+      ],
+      "substitutes": []
+    },
+    "sirloin steak": {
+      "aliases": [
+        "sirloin",
+        "top sirloin"
+      ],
+      "substitutes": []
+    },
+    "sliced turkey": {
+      "aliases": [
+        "deli turkey",
+        "turkey breast deli",
+        "turkey deli meat"
+      ],
+      "substitutes": []
+    },
+    "smoked paprika": {
+      "aliases": [
+        "sweet smoked paprika"
+      ],
+      "substitutes": []
+    },
+    "smoked salmon": {
+      "aliases": [
+        "gravlax",
+        "lox"
+      ],
+      "substitutes": []
+    },
+    "snap peas": {
+      "aliases": [
+        "snap pea",
+        "sugar snap peas"
+      ],
+      "substitutes": []
+    },
+    "sourdough bread": {
+      "aliases": [
+        "sourdough",
+        "sourdough loaf"
+      ],
+      "substitutes": []
+    },
+    "soy sauce": {
+      "aliases": [
+        "dark soy sauce",
+        "light soy sauce",
+        "shoyu"
+      ],
+      "substitutes": []
+    },
+    "spaghetti": {
+      "aliases": [
+        "spaghetti noodles",
+        "spaghetti pasta"
+      ],
+      "substitutes": []
+    },
+    "spinach": {
+      "aliases": [
+        "baby spinach",
+        "fresh spinach"
+      ],
+      "substitutes": []
+    },
+    "split peas": {
+      "aliases": [
+        "dried split peas",
+        "green split peas",
+        "yellow split peas"
+      ],
+      "substitutes": []
+    },
+    "sriracha": {
+      "aliases": [
+        "sriracha hot sauce",
+        "sriracha sauce"
+      ],
+      "substitutes": []
+    },
+    "strawberry": {
+      "aliases": [
+        "fresh strawberries",
+        "strawberries"
+      ],
+      "substitutes": []
+    },
+    "sugar": {
+      "aliases": [
+        "caster sugar",
+        "granulated sugar",
+        "white sugar"
+      ],
+      "substitutes": []
+    },
+    "sweet potato": {
+      "aliases": [
+        "sweet potatoes",
+        "yam"
+      ],
+      "substitutes": []
+    },
+    "taco shells": {
+      "aliases": [
+        "corn taco shells",
+        "crunchy taco shells",
+        "hard taco shells"
+      ],
+      "substitutes": []
+    },
+    "tahini": {
+      "aliases": [
+        "sesame paste",
+        "tahina"
+      ],
+      "substitutes": []
+    },
+    "tamarind paste": {
+      "aliases": [
+        "tamarind concentrate",
+        "tamarind puree"
+      ],
+      "substitutes": []
+    },
+    "tartar sauce": {
+      "aliases": [
+        "tartare sauce"
+      ],
+      "substitutes": []
+    },
+    "thyme": {
+      "aliases": [
+        "dried thyme",
+        "fresh thyme",
+        "thyme leaves"
+      ],
+      "substitutes": []
+    },
+    "tilapia fillet": {
+      "aliases": [
+        "tilapia",
+        "tilapia fillets"
+      ],
+      "substitutes": []
+    },
+    "tomato": {
+      "aliases": [
+        "beefsteak tomato",
+        "fresh tomato",
+        "plum tomato",
+        "roma tomato",
+        "tomatoes"
+      ],
+      "substitutes": []
+    },
+    "tomato paste": {
+      "aliases": [
+        "double concentrate tomato paste",
+        "tomato puree"
+      ],
+      "substitutes": []
+    },
+    "tortilla chips": {
+      "aliases": [
+        "corn tortilla chips",
+        "nacho chips"
+      ],
+      "substitutes": []
+    },
+    "turmeric": {
+      "aliases": [
+        "ground turmeric",
+        "turmeric powder"
+      ],
+      "substitutes": []
+    },
+    "vanilla extract": {
+      "aliases": [
+        "pure vanilla extract",
+        "vanilla essence"
+      ],
+      "substitutes": []
+    },
+    "vegetable broth": {
+      "aliases": [
+        "vegetable bouillon",
+        "vegetable stock",
+        "veggie broth"
+      ],
+      "substitutes": []
+    },
+    "walnuts": {
+      "aliases": [
+        "chopped walnuts",
+        "walnut",
+        "walnut halves"
+      ],
+      "substitutes": []
+    },
+    "water chestnuts": {
+      "aliases": [
+        "canned water chestnuts",
+        "water chestnut"
+      ],
+      "substitutes": []
+    },
+    "white beans": {
+      "aliases": [
+        "great northern beans",
+        "navy beans",
+        "white bean"
+      ],
+      "substitutes": []
+    },
+    "white onion": {
+      "aliases": [
+        "white onions"
+      ],
+      "substitutes": []
+    },
+    "white rice": {
+      "aliases": [
+        "basmati rice",
+        "jasmine rice",
+        "long grain white rice"
+      ],
+      "substitutes": []
+    },
+    "white wine": {
+      "aliases": [
+        "dry white wine"
+      ],
+      "substitutes": []
+    },
+    "whole chicken": {
+      "aliases": [
+        "fryer chicken",
+        "roaster chicken",
+        "whole roasting chicken"
+      ],
+      "substitutes": []
+    },
+    "worcestershire sauce": {
+      "aliases": [
+        "worcestershire",
+        "worchester sauce"
+      ],
+      "substitutes": []
+    },
+    "ziti pasta": {
+      "aliases": [
+        "baked ziti pasta",
+        "ziti"
+      ],
+      "substitutes": []
+    },
+    "zucchini": {
+      "aliases": [
+        "courgette",
+        "courgettes",
+        "zucchinis"
+      ],
+      "substitutes": []
+    }
+  }
+}
